@@ -1,0 +1,14 @@
+{{! template-lint-disable }}
+
+{{#if authenticated}}
+    <button onclick={{action "logout"}}>Logout</button>
+  <p>
+    {{userinfo-component}}
+  </p>
+{{else}}  
+    <h1>AAD V2 MSAL Authentication within an Emberjs SPA</h1>
+    {{yield}}
+    {{#paper-button raised=true primary=true onClick=(action "login" model)}}Login{{/paper-button}}
+    <br><br>
+    <small>To update the configurations for authentication edit the file <b>config/environment.js</b>, then restart the SPA.</small>
+{{/if}}

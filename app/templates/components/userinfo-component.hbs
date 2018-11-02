@@ -1,0 +1,30 @@
+{{! template-lint-disable }}
+
+<div class="layout-row flex">
+<div class="flex-20">displayableID: </div><div class="flex-40">{{displayableId}}</div>
+</div>
+<div class="layout-row flex">
+<div class="flex-20">name: </div><div class="flex-40">{{name}}</div>
+</div>
+<div class="layout-row flex">
+<div class="flex-20">identityProvider: </div><div class="flex-40">{{identityProvider}}</div>
+</div>
+<div class="layout-row flex">
+<div class="flex-20">userIdentifier: </div><div class="flex-40">{{userIdentifier}}</div>
+</div>
+
+
+{{#each-in idToken as | key value |}}
+  <div class="layout-row layout-xs flex">
+  <div class="flex-20">idToken.{{key}}</div><div class="flex-40">{{value}}</div>
+  </div>
+{{/each-in}}
+
+<br>
+<br>
+<button onclick={{action "getAccessToken"}}>Request Access Token</button>
+
+
+
+
+

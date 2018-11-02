@@ -1,0 +1,25 @@
+{{! template-lint-disable }}
+
+{{#paper-toolbar}}
+  <div class="md-toolbar-tools">
+    <div class="paper-right">
+      {{paper-icon "person"}}
+    </div>
+  </div>
+{{/paper-toolbar}}
+
+{{#paper-content class="md-padding"}}
+  {{#login-component model=model}}
+    <div class="layout-column flex">
+      <div class="layout layout-sm-column">
+          {{paper-input class="flex-40" label="clientId" placeholder="clientId" value=model.clientId onChange=null}}
+      </div>
+      <div class="layout layout-sm-column">
+          {{paper-input class="flex-40" label="resource" placeholder="resource" value=model.resource onChange=null}}
+      </div>
+      <div class="layout layout-sm-column">
+          {{paper-input class="flex-40" label="redirectUri" placeholder="redirectUri" value=model.redirectUri onChange=null}}
+      </div>
+    </div>
+  {{/login-component}}
+{{/paper-content}}
