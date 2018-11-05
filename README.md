@@ -1,7 +1,7 @@
 # ember-aad2-msal
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+A working ember application that makes use of msal for authentication against a aad v2 endpoint.  The flow is implicit.
+Msal will manage the token validation, token caching and token renewals for the application.  Ember quickstart was used to generate the initial project.
 
 ## Prerequisites
 
@@ -31,7 +31,7 @@ node: 8.9.1
 os: linux x64
 ```
 
-## Implementation details:
+## My specific implementation details (after generating a new ember project):
 
 Installed support for common.js transformations (needed for msal):
 ```
